@@ -111,8 +111,8 @@ export default function HomePage() {
 
       <div className="card">
         <h3>Search by ID</h3>
-        <input type="number" value={searchId} onChange={(e) => setSearchId(e.target.value)} placeholder="Enter user ID" />
-        <button onClick={handleSearch}>Search</button>
+        <input id="searchId" type="number" value={searchId} onChange={(e) => setSearchId(e.target.value)} placeholder="Enter user ID" />
+        <button id="searchBtn" onClick={handleSearch}>Search</button>
         <button className="secondary" onClick={() => { setSearchId(''); setSearchResult(''); }}>Clear</button>
         <div style={{ marginTop: 10, fontSize: 14 }}>{searchResult}</div>
       </div>
