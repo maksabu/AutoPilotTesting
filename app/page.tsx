@@ -72,13 +72,7 @@ export default function HomePage() {
       setSearchResult('Enter an ID first.');
       return;
     }
-    const res = await fetch('/api/users/' + searchId);
-    if (res.status === 404) {
-      setSearchResult('No user found with ID ' + searchId);
-      return;
-    }
-    const u = await res.json();
-    setSearchResult(`Found: #${u.id} - ${u.firstname} ${u.lastname}, Age ${u.age}, Role ${u.role}`);
+    router.push('/search/' + searchId);
   }
 
   async function handleLogout() {
